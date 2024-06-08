@@ -1,0 +1,5 @@
+NOTE: while you may be able to cheese through with the use of tools like 'Rsactftool', it is advised that you actually go through
+the standard attacks, their algorithms, and try all of them, maybe come up with your own attack in deciding how to get the plaintext from 
+the ciphertext through different properties of the parameters. 
+
+You have to upload the script(s) and write an explanation you used to get the flag.
