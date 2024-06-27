@@ -1,3 +1,3 @@
 # Submission Link
 Submit flags at https://forms.gle/vnQdyC7axS4WprFn9 <br>
-Deadline: 10th July 2023
+Deadline: 20th July 2024
