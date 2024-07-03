@@ -52,7 +52,7 @@ Another interesting class of classical ciphers is the transposition ciphers. As 
 
 ### Morse Code
 Morse Code is NOT a cipher! It’s an encoding format, albeit one used quite often in Classical Cryptography.
-- https://web.northeastern.edu/stemout/morse-code
+- https://en.wikipedia.org/wiki/Morse_code#Letters,_numbers,_punctuation,_prosigns_for_Morse_code_and_non-Latin_variants
 <details>
 <summary> <strong>EXERCISE:</strong> Decode <em>-- --- .-. ... . / .... .- ... / .- / ...- . .-. -.-- / .. -. - . .-. . ... - .. -. --. / ... . - / --- ..-. / ..- ... .- --. . ... / .. -. / .... .. ... - --- .-. -.--</em> [Morse]</summary>
 <strong>ANSWER:</strong> MORSE HAS A VERY INTERESTING SET OF USAGES IN HISTORY
