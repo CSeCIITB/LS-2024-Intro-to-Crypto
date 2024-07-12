@@ -6,14 +6,15 @@ The Hill cipher is a classical symmetric encryption algorithm that uses linear a
 
 ### How the Hill Cipher Works
 
-1. **Key Matrix**: A key matrix of size $ n \times n $ is chosen. This matrix must be invertible (i.e., it must have a non-zero determinant modulo 26 if working with the English alphabet).
-2. **Plaintext Vector**: The plaintext is divided into blocks of size $ n $. Each block is represented as a vector.
+1. **Key Matrix**: A key matrix of size $n \times n$ is chosen. This matrix must be invertible (i.e., it must have a non-zero determinant modulo 26 if working with the English alphabet).
+2. **Plaintext Vector**: The plaintext is divided into blocks of size $n$. Each block is represented as a vector.
 3. **Encryption**: Each plaintext vector is multiplied by the key matrix to produce the ciphertext vector. The operations are performed modulo 26.
 4. **Decryption**: The inverse of the key matrix is used to convert the ciphertext vectors back to plaintext vectors.
 
 ### Example
 
 **Key Matrix (3x3)**: We will use the key GYBNQKURP encoded as,
+
 $$ K = \begin{pmatrix}
 6 & 24 & 1 \\
 13 & 16 & 10 \\
@@ -23,6 +24,7 @@ $$ K = \begin{pmatrix}
 **Plaintext**: "ACT"
 
 **Plaintext Vector**:
+
 $$ P = \begin{pmatrix}
 0 \\
 2 \\
@@ -30,6 +32,7 @@ $$ P = \begin{pmatrix}
 \end{pmatrix} $$
 
 **Encryption**:
+
 $$ C = K \times P \mod 26 $$
 
 $$ C = \begin{pmatrix}
@@ -65,22 +68,22 @@ $$ C = \begin{pmatrix}
 The script consists of two main modes:
 
 **Mode 1: Encryption**
-
- The script should accept a plaintext input, convert it into ciphertext using a given key of size $3\times3$, and output the ciphertext. Add padding of 'X' characters to ensure plaintext is a multiple of the key size.
+ 
+ The script should accept a plaintext input, convert it into ciphertext using a given key of size $3 \times 3$, and output the ciphertext. Add padding of 'X' characters to ensure plaintext is a multiple of the key size.
 
 **Mode 2: Key Discovery**
 
 The script should take a known plaintext and its corresponding ciphertext as input and output the key. 
 
 **Note:**
-The key size is fixed to be a $3\times3$ matrix here.
+The key size is fixed to be a $3 \times 3$ matrix here.
 Ensure the scripts are well-documented and include comments explaining the steps and logic used.
 
 ### Testing
 
 Your encryption script should be able to encrypt a message of any size with a given key, where the message and key consist entirely of capital english alphabet letters.
 
-Your decryption script should be able to generate the key matrix given a (plaintext,ciphertext) pair with size more than 9 characters and the matrices formed by resizing the plaintext and ciphertext into a 3x3 matrix is invertible modulo 26.
+Your decryption script should be able to generate the key matrix given a (plaintext,ciphertext) pair with size more than 9 characters and the matrices formed by resizing the plaintext and ciphertext into a $3 \times 3$ matrix is invertible modulo 26.
 
 The submission will be tested on various input sizes and it is gauranteed that the (plaintext,ciphertext) pairs will form an invertible matrix modulo 26.
 
