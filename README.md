@@ -7,3 +7,5 @@ Head on to [Section-1](Section-1/README.md) to get started! [[Challenges](Sectio
 After you're done with Section-2, move on to the last section of the course - [Section-3](Section-3/README.md)! [[Challenges](Section-3/Challenges)]
 
 You can find the project statement [here](Project/README.md).
+
+Deadline for the Assignments is now **21st July EOD**. Deadline for both parts of the Project is **27th July EOD**.
