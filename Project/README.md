@@ -90,20 +90,18 @@ The submission will be tested on various input sizes and it is gauranteed that t
 ### Submission
 Submit the link of the github repo containing your script [here](https://forms.gle/82L7kcDBP2VbZQEBA).
 
-<!-- 
-## Part 2: Bleichenbacher's Attack
 
-[This paper](https://link.springer.com/chapter/10.1007/BFb0055716) describes an attack on [PKCS#1v1.5](https://en.wikipedia.org/wiki/PKCS_1). It is an "adaptive chosen ciphertext attack", which means you start with a valid ciphertext and repeatedly change it based on the information you get from the oracle while also learning information about the plaintext.
+## Part 2: RSA Parity Attack
 
-You have to implement a simpler version of the attack:
-*  Generate a 256-bit RSA pair (that is, p and q will each be 128 bit primes), [n, e, d].
-* Implement a function that PKCS1.5-pads the input. 
-* Implement an Oracle function that takes as input a ciphertext and has access to the secret key. It will output 1 if the decrypted plaintext has `0x00` and `0x02` as the starting 2 bytes.
-* PKCS1.5-pad a short message, like "rick, the roll", and call it "m". Encrypt to to get "c".
-* Decrypt "c" using your padding oracle.
+You have to implement an "adaptive chosen ciphertext" attack on RSA given oracle access to a function that tells you if the decryption of the inputted ciphertext is even or odd.
 
-Since the RSA modulus is small in this example, you can factor it out instantly but because of the small modulus we directly go to the *Step 2c* of the paper.
+To achieve that you have to implement the following:
+* Create a 1024-bit RSA pair (p,q,e,d,n)
+* Implement an encryption function that encrypts a message 'm' with [e,n] to give ciphertext 'c'
+* Implement a decryption function that returns the decryption of ciphertext 'c' with [d,n] to give 'm'
+* Implement an oracle function that takes as input a ciphertext 'c' and has access to the previously generated secret key 'd' and outputs **True** if Dec(c,d) is odd and **False** if Dec(c,d) is even
+* Finally implement a function that takes as input an honest ciphertext 'c' and adaptively queries the oracle with multiple ciphertexts to figure out the decrypted message 'm'
 
-The complete decryption script should implement the Steps 2a, 2c and 3 of the paper.
+Some helper code has been provived [here](./RSA_parity_attack.py).
 
-Upload the above script in a personal Github repo and submit the link [here](). -->
+Upload the above script in a personal Github repo and submit the link [here](https://forms.gle/UepCbr36R2u2k7eT8).
