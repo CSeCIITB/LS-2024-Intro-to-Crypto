@@ -87,6 +87,9 @@ Your decryption script should be able to generate the key matrix given a (plaint
 
 The submission will be tested on various input sizes and it is gauranteed that the (plaintext,ciphertext) pairs will form an invertible matrix modulo 26.
 
+### Example
+Given the message "ANTCATDOG" and ciphertext "TIMFINWLY", the key produced should be "GYBNQKURP"
+
 ### Submission
 Submit the link of the github repo containing your script [here](https://forms.gle/82L7kcDBP2VbZQEBA).
 
